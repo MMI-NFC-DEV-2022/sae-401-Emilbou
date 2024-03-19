@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { supabase, user } from '@/supabase'
-
+import SupportsFilms from '@/components/SupportsFilms.vue';
 </script>
 
 <template>
@@ -21,4 +21,8 @@ import { supabase, user } from '@/supabase'
       </li>
   </ul>
 </nav>
+
+
+<SupportsFilms></SupportsFilms>
+
 </template>

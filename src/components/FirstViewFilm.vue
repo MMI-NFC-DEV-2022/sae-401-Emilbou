@@ -10,13 +10,13 @@
 >
 
     <div class="flex justify-between w-full pb-5">
-      <h1 class="text-custom-blanc text-blanc text-xl font-bold">{{ nom_film }}</h1>
+      <h1 class="text-custom-blanc text-blanc text-xl font-bold">{{ FilmsData!.nom_film }}</h1>
       <div>favori</div>
     </div>
     <div class="flex justify-between">
       <div class="w-1/2 flex flex-col justify-between">
         <div class="flex flex-col">
-          <p class="text-custom-blanc text-blanc text-base ">{{ condense_film }}</p>
+          <p class="text-custom-blanc text-blanc text-base ">{{ FilmsData!.condense_film }}</p>
           <span class="text-custom-blanc text-blanc text-base ">{{ date_film }}</span>
           <span class="text-custom-blanc text-blanc text-base ">{{ duree_film }}</span>
         </div>
@@ -26,42 +26,23 @@
         <img :src="affiche_film" class="rounded-md " alt="" />
       </div>
     </div>
-  </div>
-<div class="p-5">
-    
+  </div>    
       <h2 class="titre2mobile mt-4">
         Synopsis
       </h2>
       <p class="mt-4">{{ description_film }}</p>
-
-      <h2 class="mt-7">
-        Où regarder
-      </h2>
-      <!-- afficher les différentes plateformes de streaming -->
-      <button class="py-2 w-full rounded-2xl bg-orange border-solid border font-bold my-5">
-        Voir toutes les offres
-      </button>
-      <div>
-        <h2>Supports</h2>
-        <p>{{ film_support }}</p>
-        <!-- afficher les différents supports -->
-        <button>
-          Voir toutes les versions
-        </button>
-      </div>
-      <h2>
-        Casting
-      </h2>
-      <!-- afficher les différentes personnes et leurs rôles -->
-</div>
 </template>
 
 <script setup lang="ts">
-import type { FilmsType } from '@/types';
 import { supabase } from '@/supabase';
-defineProps<FilmsType>();
-
-
+import { ref, onMounted } from 'vue';
+const Film = ref({});
+const props = defineProps<{
+  id_Films: string,
+}>()
+const { data: FilmsData, error} = await supabase.from('Films').select('*').eq('id', props.id_Films).single()
+console.log(FilmsData)
+console.log(error)
 </script>
 
 <style scoped>

@@ -3,28 +3,14 @@ import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router/auto';
 import { supabase } from '@/supabase';
 import FirstViewFilm from '@/components/FirstViewFilm.vue';
-
+import SupportsFilms from '@/components/SupportsFilms.vue';
 const route = useRoute("/basket/edit/[id]");
-const Film = ref({});
-
-onMounted(async () => {
-  const { data, error } = await supabase
-    .from('Films')
-    .select('*')
-    .eq('id', route.params.id)
-    .single();
-
-  if (error) {
-    console.error('Erreur lors de la récupération du Film:', error);
-  } else {
-    Film.value = data;
-  }
-});
 </script>
 
 <template>
 
 
 
-  <FirstViewFilm v-bind="Film" />
+  <FirstViewFilm :id_Films="route.params.id" />
+  <SupportsFilms :id_Films="route.params.id" />
 </template>
