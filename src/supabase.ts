@@ -5,7 +5,8 @@ const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
-globalThis.supabase = supabase
+// @ts-ignore
+// globalThis.supabase = supabase
 
 const {data} = await supabase.auth.getUser()
 export const user = ref(data.user)

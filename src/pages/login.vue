@@ -1,21 +1,22 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { supabase, user } from '@/supabase'
+import type { AuthError } from '@supabase/supabase-js'
 
 const email = ref('')
 const password = ref('')
 const error = ref('')
 
 const signInWithPassword = async () => {
-  try {
+  // try {
     const { error } = await supabase.auth.signInWithPassword({
       email: email.value,
       password: password.value,
     })
     if (error) throw error
-  } catch (err) {
-    error.value = err.message
-  }
+  // } catch (err) {
+  //   error.value = (err as  AuthError).message
+  // }
 }
 </script>
 

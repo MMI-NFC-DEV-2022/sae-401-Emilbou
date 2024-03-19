@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import { useRoute } from 'vue-router';
+import { useRoute } from 'vue-router/auto';
 import { supabase } from '@/supabase';
 import FirstViewFilm from '@/components/FirstViewFilm.vue';
 
-const route = useRoute();
+const route = useRoute("/basket/edit/[id]");
 const Film = ref({});
 
 onMounted(async () => {
