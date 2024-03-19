@@ -1,7 +1,7 @@
 <template>
   <div
     :style="{
-        'background-image': 'linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(' + affiche_film + ')',
+        'background-image': 'linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(' + FilmsData!.affiche_film + ')',
         'background-size': 'cover',
         'background-position': 'top',
         'background-repeat': 'no-repeat'
@@ -17,20 +17,20 @@
       <div class="w-1/2 flex flex-col justify-between">
         <div class="flex flex-col">
           <p class="text-custom-blanc text-blanc text-base ">{{ FilmsData!.condense_film }}</p>
-          <span class="text-custom-blanc text-blanc text-base ">{{ date_film }}</span>
-          <span class="text-custom-blanc text-blanc text-base ">{{ duree_film }}</span>
+          <span class="text-custom-blanc text-blanc text-base ">{{ FilmsData!.date_film }}</span>
+          <span class="text-custom-blanc text-blanc text-base ">{{ FilmsData!.duree_film }}</span>
         </div>
         <div>genre et notes</div>
       </div>
       <div class="w-1/3">
-        <img :src="affiche_film" class="rounded-md " alt="" />
+        <img :src="FilmsData!.affiche_film" class="rounded-md " alt="" />
       </div>
     </div>
   </div>    
       <h2 class="titre2mobile mt-4">
         Synopsis
       </h2>
-      <p class="mt-4">{{ description_film }}</p>
+      <p class="mt-4">{{ FilmsData!.description_film }}</p>
 </template>
 
 <script setup lang="ts">
