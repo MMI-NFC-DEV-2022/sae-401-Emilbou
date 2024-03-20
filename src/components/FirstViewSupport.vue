@@ -1,0 +1,28 @@
+<script setup lang="ts">
+import { supabase } from '@/supabase';
+const props = defineProps<{
+  id_Films: string,
+}>()
+const { data: FilmsSupports, error} = await supabase.from('Supports_Films').select('id_films,Films(nom_film),id_supports,Supports(image_support)').eq('id_films', props.id_Films)
+console.log(FilmsSupports)
+console.log(error)
+</script>
+
+<template>
+    <div class="bg-blanc">
+    <div class="p-4 text-blanc">
+<div v-for="Unsupport in FilmsSupports">
+    
+            <h2 class="text-lg font-bold mb-5">Supports de {{ Unsupport.Films.nom_film }}</h2>
+            <div class="flex justify-evenly w-full gap-10">
+                
+                <div >
+                    <img :src="Unsupport.Supports.image_support" class="" alt="">
+    
+                </div>
+            </div>
+        </div>  
+
+</div>
+</div>
+</template>

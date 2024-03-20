@@ -22,9 +22,11 @@ console.log(error)
         </div>
         <div class="w-full flex justify-evenly mb-10 mt-10">
             
-            <button class="bg-orange text-noir font-bold w-3/4 py-3 rounded-xl mt-5">
+            <a :href="`/support/${id_Films}`" class="bg-orange text-noir font-bold w-3/4 py-3 rounded-xl mt-5">
+            <button  class="text-center flex justify-center">
             Voir toutes les offres
         </button>
+    </a>
     </div>
 </div>
 </div>
