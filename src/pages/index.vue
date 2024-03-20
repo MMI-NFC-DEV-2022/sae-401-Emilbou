@@ -19,6 +19,9 @@ import SupportsFilms from '@/components/SupportsFilms.vue';
     <li class="text-4xl">
       <router-link to="/login">page connexion</router-link>
       </li>
+    <li class="text-4xl">
+      <router-link to="/personnes">personnes</router-link>
+      </li>
   </ul>
 </nav>
 
