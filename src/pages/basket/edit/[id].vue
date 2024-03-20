@@ -14,11 +14,10 @@ const route = useRoute("/basket/edit/[id]");
 
 
   <FirstViewFilm :id_Films="route.params.id" />
-<div class="p-4">
+
   
-  <PlateformeFilm :id_Films="route.params.id" />
+  <PlateformeFilm :id_Films="route.params.id" class="p-4" />
   <SupportsFilms :id_Films="route.params.id" />
   <PersonneFilm :id_Films="route.params.id" />
-  
-</div>
+
 </template>
