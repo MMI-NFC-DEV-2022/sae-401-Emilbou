@@ -23,8 +23,8 @@ name: '/basket/edit/[id]',
         <div class="flex justify-evenly my-5 gap-5 ">
         <div v-bind="Filmographie">
             
-            <p>{{ Filmographie.Films.nom_film }}</p>
-            <img :src="Filmographie.Films.affiche_film" class="" alt="">
+            <p>{{ Filmographie.Films?.nom_film }}</p>
+            <img :src="Filmographie.Films?.affiche_film" class="" alt="">
         </div>
         </div>
     </RouterLink>

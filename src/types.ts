@@ -59,38 +59,143 @@ export type Database = {
       Personnes: {
         Row: {
           created_at: string
+          date_personne: string | null
+          description_personne: string | null
           id: number
+          image_personne: string | null
           nom_personne: string | null
           role_personne: string | null
         }
         Insert: {
           created_at?: string
+          date_personne?: string | null
+          description_personne?: string | null
           id?: number
+          image_personne?: string | null
           nom_personne?: string | null
           role_personne?: string | null
         }
         Update: {
           created_at?: string
+          date_personne?: string | null
+          description_personne?: string | null
           id?: number
+          image_personne?: string | null
           nom_personne?: string | null
           role_personne?: string | null
         }
         Relationships: []
       }
+      Personnes_Films: {
+        Row: {
+          created_at: string
+          id: number
+          id_films: number | null
+          id_Personnes: number | null
+        }
+        Insert: {
+          created_at?: string
+          id?: number
+          id_films?: number | null
+          id_Personnes?: number | null
+        }
+        Update: {
+          created_at?: string
+          id?: number
+          id_films?: number | null
+          id_Personnes?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "public_Personnes_Films_id_Films_fkey"
+            columns: ["id_films"]
+            isOneToOne: false
+            referencedRelation: "Films"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "public_Personnes_Films_id_Personnes_fkey"
+            columns: ["id_Personnes"]
+            isOneToOne: false
+            referencedRelation: "Personnes"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      Plateformes: {
+        Row: {
+          created_at: string
+          id: number
+          image_plateforme: string | null
+          nom_plateforme: string | null
+        }
+        Insert: {
+          created_at?: string
+          id?: number
+          image_plateforme?: string | null
+          nom_plateforme?: string | null
+        }
+        Update: {
+          created_at?: string
+          id?: number
+          image_plateforme?: string | null
+          nom_plateforme?: string | null
+        }
+        Relationships: []
+      }
+      Plateformes_Films: {
+        Row: {
+          created_at: string
+          id: number
+          id_films: number | null
+          id_plateformes: number | null
+        }
+        Insert: {
+          created_at?: string
+          id?: number
+          id_films?: number | null
+          id_plateformes?: number | null
+        }
+        Update: {
+          created_at?: string
+          id?: number
+          id_films?: number | null
+          id_plateformes?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "public_Plateformes_Films_id_films_fkey"
+            columns: ["id_films"]
+            isOneToOne: false
+            referencedRelation: "Films"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "public_Plateformes_Films_id_plateformes_fkey"
+            columns: ["id_plateformes"]
+            isOneToOne: false
+            referencedRelation: "Plateformes"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       Supports: {
         Row: {
           created_at: string
           id: number
+          image_support: string | null
           nom_support: string | null
         }
         Insert: {
           created_at?: string
           id?: number
+          image_support?: string | null
           nom_support?: string | null
         }
         Update: {
           created_at?: string
           id?: number
+          image_support?: string | null
           nom_support?: string | null
         }
         Relationships: []

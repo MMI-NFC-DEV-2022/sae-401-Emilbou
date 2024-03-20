@@ -23,9 +23,9 @@ name: '/basket/edit/[id]',
             <h2 class="text-lg font-bold mb-5" v-bind="Unsupport">Supports de {{ Unsupport.Films.nom_film }}</h2>
     
             <div class="flex justify-evenly w-full gap-10">
+                <div v-for="unSupport of Unsupport.Supports">
                 
-                <div >
-                    <img :src="Unsupport.Supports.image_support" class="" alt="">
+                    <img :src="unSupport.image_support" class="" alt="">
     
                 </div>
             </div>

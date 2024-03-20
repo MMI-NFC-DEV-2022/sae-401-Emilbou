@@ -4,8 +4,10 @@ const props = defineProps<{
   id_Films: string,
 }>()
 const { data: FilmsSupports, error} = await supabase.from('Supports_Films').select('id_supports,Supports(image_support)').eq('id_films', props.id_Films)
-console.log(FilmsSupports)
-console.log(error)
+console.log("Dans SupportFilm, le support : ",FilmsSupports)
+if (error) {
+    console.error('Erreur lors de la récupération des supports : ', error)
+    }
 </script>
 
 <template>
@@ -14,9 +16,10 @@ console.log(error)
 
         <h2 class="text-lg font-bold mb-5">Supports</h2>
 <div class="flex justify-evenly w-full gap-10">
-    
-            <div v-for="Unsupport in FilmsSupports">
-                <img :src="Unsupport.Supports.image_support" class="" alt="">
+    <h1>ICI c'est ou ?</h1>
+            <div v-for="unSupport of FilmsSupports" >
+                <h1>ICI dans boucle unSupport : {{ unSupport }}</h1>
+                <img :src="unSupport.Supports.image_support" class="" alt="">
     
 </div>
         </div>
