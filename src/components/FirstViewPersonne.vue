@@ -2,6 +2,10 @@
 <div>
 
 <p>{{ PersonnesData!.nom_personne }}</p>
+<img :src="PersonnesData!.image_personne" alt="">
+<p>{{ PersonnesData!.role_personne }}</p>
+<p>{{ PersonnesData!.date_personne }}</p>
+<p>{{ PersonnesData!.description_personne }}</p>
 
 </div>
 </template>
