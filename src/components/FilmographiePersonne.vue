@@ -11,6 +11,7 @@ console.log(error)
 <template>
     <div class="p-4">
         <h2 class="text-lg font-bold mb-5 mt-5">Filmographie</h2>
+        <div class="w-1/2 flex flex-row justify-evenly">
             <RouterLink
     v-for="Filmographie in PersonnesFilms"
     :to="{
@@ -19,13 +20,14 @@ name: '/basket/edit/[id]',
     id:Filmographie.id_films
   },
     }">
-        <div class="flex justify-evenly my-5 gap-5">
+        <div class="flex justify-evenly my-5 gap-5 ">
         <div v-bind="Filmographie">
             
             <p>{{ Filmographie.Films.nom_film }}</p>
-            <img :src="Filmographie.Films.affiche_film" alt="">
+            <img :src="Filmographie.Films.affiche_film" class="" alt="">
         </div>
         </div>
     </RouterLink>
+</div>
 </div>
 </template>

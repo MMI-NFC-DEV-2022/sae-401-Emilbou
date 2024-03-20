@@ -20,7 +20,7 @@ name: '/basket/edit/[id]',
     id:Unsupport.id_films
   },
     }">
-            <h2 class="text-lg font-bold mb-5">Supports de {{ Unsupport.Films.nom_film }}</h2>
+            <h2 class="text-lg font-bold mb-5" v-bind="Unsupport">Supports de {{ Unsupport.Films.nom_film }}</h2>
     
             <div class="flex justify-evenly w-full gap-10">
                 

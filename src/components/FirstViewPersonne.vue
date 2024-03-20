@@ -1,12 +1,13 @@
 <template>
-<div>
+<div class="flex p-4">
 
-<p>{{ PersonnesData!.nom_personne }}</p>
-<img :src="PersonnesData!.image_personne" alt="">
-<p>{{ PersonnesData!.role_personne }}</p>
-<p>{{ PersonnesData!.date_personne }}</p>
-<p>{{ PersonnesData!.description_personne }}</p>
+    <img class="pr-4" :src="PersonnesData!.image_personne" alt="">
+    <div>
+    <p class="text-xl font-bold">{{ PersonnesData!.nom_personne }}</p>
+<p class="text-lg font-semibold">{{ PersonnesData!.date_personne }}</p>
+<p class="w-1/2">{{ PersonnesData!.description_personne }}</p>
 
+</div>
 </div>
 </template>
 
