@@ -3,7 +3,7 @@ import { supabase } from '@/supabase';
 const props = defineProps<{
   id_Films: string,
 }>()
-const { data: FilmsPlateformes, error} = await supabase.from('Plateformes_Films').select('id_plateformes,Plateformes(nom_plateforme)').eq('id_films', props.id_Films)
+const { data: FilmsPlateformes, error} = await supabase.from('Plateformes_Films').select('id_plateformes,Plateformes(image_plateforme)').eq('id_films', props.id_Films)
 console.log(FilmsPlateformes)
 console.log(error)
 </script>
@@ -13,7 +13,7 @@ console.log(error)
         <h2 class="text-lg font-bold mb-5">Où regarder</h2><div class="flex justify-evenly my-5">
             
             <div v-for="Uneplateforme in FilmsPlateformes" >
-                <p v-bind="Uneplateforme">{{ Uneplateforme.Plateformes.nom_plateforme }}</p>
+                <img :src="Uneplateforme.Plateformes.image_plateforme" class="rounded-lg" alt="">
             </div>
         </div><div class="w-full flex justify-center mb-10">
             
