@@ -18,6 +18,15 @@ const signInWithPassword = async () => {
   //   error.value = (err as  AuthError).message
   // }
 }
+async function signInWithGithub() {
+  const { data, error } = await supabase.auth.signInWithOAuth({
+    provider: 'github',
+  })
+}
+async function signOut() {
+  const { error } = await supabase.auth.signOut()
+}
+
 </script>
 
 <template>
@@ -41,5 +50,12 @@ const signInWithPassword = async () => {
         <button type="submit">Se connecter</button>
       </form>
     </div>
-  </div>
+
+      <form @submit.prevent="signInWithGithub" class="flex flex-col">
+
+        
+        <button type="submit">Se connecter avec github</button>
+      </form>
+    </div>
+    
 </template>

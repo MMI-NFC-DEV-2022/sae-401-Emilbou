@@ -26,6 +26,5 @@ import SupportsFilms from '@/components/SupportsFilms.vue';
 </nav>
 
 
-<SupportsFilms></SupportsFilms>
 
 </template>
