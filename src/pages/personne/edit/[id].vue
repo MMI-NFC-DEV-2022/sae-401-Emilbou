@@ -2,10 +2,7 @@
 import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router/auto';
 import { supabase } from '@/supabase';
-import FirstViewFilm from '@/components/FirstViewFilm.vue';
-import SupportsFilms from '@/components/SupportsFilms.vue';
-import PersonneFilm from '@/components/PersonneFilm.vue';
-import PlateformeFilm from '@/components/PlateformeFilm.vue';
+import FirstViewPersonne from '@/components/FirstViewPersonne.vue';
 const route = useRoute("/personne/edit/[id]");
 </script>
 
@@ -13,11 +10,7 @@ const route = useRoute("/personne/edit/[id]");
 
 
 
-  <FirstViewFilm :id_Films="route.params.id" />
+  <FirstViewPersonne :id_Personnes="route.params.id"/>
 
-  
-  <PlateformeFilm :id_Films="route.params.id" class="p-4" />
-  <SupportsFilms :id_Films="route.params.id" />
-  <PersonneFilm :id_Films="route.params.id" />
 
 </template>

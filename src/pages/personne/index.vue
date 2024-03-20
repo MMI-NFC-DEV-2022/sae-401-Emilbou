@@ -1,11 +1,20 @@
 <template>
-  <div class="flex gap-5">
+  <div class="flex gap-5"  >
+    <RouterLink
+    v-for="Personne in Personnes"
+    :to="{
+name: '/personne/edit/[id]',
+  params: {
+    id:Personne.id
+  },
+    }">
     <CardPersonnes
-      v-for="Personne in Personnes"
+      v-bind="Personne"
 :role_personne="Personne.role_personne"
 :image_personne="Personne.image_personne"
 :nom_personne="Personne.nom_personne"
     />
+  </RouterLink>
   </div>
 </template>
 
