@@ -10,10 +10,18 @@ console.log(error)
 
 <template>
     <div class="bg-blanc">
-    <div class="p-4 text-blanc">
-<div v-for="Unsupport in FilmsSupports">
+    <div class="p-4">
     
+            <RouterLink
+    v-for="Unsupport in FilmsSupports"
+    :to="{
+name: '/basket/edit/[id]',
+  params: {
+    id:Unsupport.id_films
+  },
+    }">
             <h2 class="text-lg font-bold mb-5">Supports de {{ Unsupport.Films.nom_film }}</h2>
+    
             <div class="flex justify-evenly w-full gap-10">
                 
                 <div >
@@ -21,8 +29,8 @@ console.log(error)
     
                 </div>
             </div>
+            </RouterLink>
         </div>  
 
-</div>
 </div>
 </template>
