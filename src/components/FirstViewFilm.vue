@@ -26,11 +26,13 @@
         <img :src="FilmsData!.affiche_film" class="rounded-md " alt="" />
       </div>
     </div>
-  </div>    
-      <h2 class="titre2mobile mt-4">
-        Synopsis
-      </h2>
-      <p class="mt-4">{{ FilmsData!.description_film }}</p>
+  </div>   <div class="p-4">
+    
+        <h2 class="titre2mobile mt-4">
+          Synopsis
+        </h2>
+        <p class="mt-4">{{ FilmsData!.description_film }}</p>
+  </div>
 </template>
 
 <script setup lang="ts">

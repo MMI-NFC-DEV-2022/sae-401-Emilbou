@@ -10,7 +10,7 @@ console.log(error)
 
 <template>
     <div>
-        <h2>Supports</h2>
+        <h2 class="text-lg font-bold">Supports</h2>
         <div v-for="Unsupport in FilmsSupports">
             <p>{{ Unsupport.Supports.nom_support }}</p>
         </div>

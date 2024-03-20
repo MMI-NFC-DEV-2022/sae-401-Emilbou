@@ -3,16 +3,16 @@ import { supabase } from '@/supabase';
 const props = defineProps<{
   id_Films: string,
 }>()
-const { data: FilmsPersonnes, error} = await supabase.from('Personnes_Films').select('id_Personnes,Personnes(nom_personne)').eq('id_films', props.id_Films)
-console.log(FilmsPersonnes)
+const { data: FilmsPlateformes, error} = await supabase.from('Plateformes_Films').select('id_plateformes,Plateformes(nom_plateforme)').eq('id_films', props.id_Films)
+console.log(FilmsPlateformes)
 console.log(error)
 </script>
 
 <template>
     <div>
-        <h2>Acteur</h2>
-        <div v-for="Unacteur in FilmsPersonnes">
-            <p>{{ Unacteur.Personnes.nom_personne }}</p>
+        <h2 class="text-lg font-bold">Plateforme</h2>
+        <div v-for="Uneplateforme in FilmsPlateformes">
+            <p>{{ Uneplateforme.Plateformes.nom_plateforme }}</p>
         </div>
     </div>
 </template>
