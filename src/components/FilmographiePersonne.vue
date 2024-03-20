@@ -16,7 +16,7 @@ console.log(error)
     :to="{
 name: '/basket/edit/[id]',
   params: {
-    id:Filmographie.Films.id
+    id:Filmographie.id_films
   },
     }">
         <div class="flex justify-evenly my-5 gap-5">

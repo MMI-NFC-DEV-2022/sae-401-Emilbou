@@ -11,12 +11,21 @@ console.log(error)
 <template>
     <div class="p-4">
         <h2 class="text-lg font-bold mb-5 mt-5">Personnes</h2>
+        <RouterLink
+    v-for="Unacteur in FilmsPersonnes"
+    :to="{
+name: '/personne/edit/[id]',
+  params: {
+    id:Unacteur.id_Personnes
+  },
+    }">
         <div class="flex justify-evenly my-5 gap-5">
-        <div v-for="Unacteur in FilmsPersonnes">
+        <div v-bind="Unacteur">
             <p>{{ Unacteur.Personnes.nom_personne }}</p>
             <img :src="Unacteur.Personnes.image_personne" alt="">
             <p>{{ Unacteur.Personnes.role_personne }}</p>
         </div>
         </div>
+         </RouterLink>
     </div>
 </template>
