@@ -1,10 +1,7 @@
 <template>
-  <div>
-    <h1>{{ nom_film }}</h1>
-    <h1>{{ duree_film }}</h1>
-    <h1>{{ date_film }}</h1>
-    <h1>{{ description_film }}</h1>
-    <img :src="affiche_film" alt="" />
+  <div class="flex flex-col justify-center text-center">
+    <img class="object-cover w-full h-64 rounded-lg" :src="affiche_film" alt="" />
+    <h1 class="text-lg font-bold mb-5">{{ nom_film }}</h1>
   </div>
 </template>
 
