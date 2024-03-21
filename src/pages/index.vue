@@ -14,7 +14,7 @@ import SupportsFilms from '@/components/SupportsFilms.vue';
       <router-link to="/">Home</router-link>
     </li>
     <li class="text-4xl">
-      <router-link to="/basket">données de supabase</router-link>
+      <router-link to="/film">données de supabase</router-link>
       </li>
     <li class="text-4xl">
       <router-link to="/login">page connexion</router-link>

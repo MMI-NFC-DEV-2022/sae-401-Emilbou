@@ -6,7 +6,7 @@ import FirstViewFilm from '@/components/FirstViewFilm.vue';
 import SupportsFilms from '@/components/SupportsFilms.vue';
 import PersonneFilm from '@/components/PersonneFilm.vue';
 import PlateformeFilm from '@/components/PlateformeFilm.vue';
-const route = useRoute("/basket/edit/[id]");
+const route = useRoute("/film/edit/[id]");
 </script>
 
 <template>

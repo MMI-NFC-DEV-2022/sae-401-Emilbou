@@ -15,7 +15,7 @@ console.log(error)
             <RouterLink
     v-for="Unsupport in FilmsSupports"
     :to="{
-name: '/basket/edit/[id]',
+name: '/film/edit/[id]',
   params: {
     id:Unsupport.id_films
   },

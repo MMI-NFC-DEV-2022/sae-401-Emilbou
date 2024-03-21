@@ -15,7 +15,7 @@ console.log(error)
             <RouterLink
     v-for="Filmographie in PersonnesFilms"
     :to="{
-name: '/basket/edit/[id]',
+name: '/film/edit/[id]',
   params: {
     id:Filmographie.id_films
   },

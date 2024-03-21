@@ -3,7 +3,7 @@
      <RouterLink
     v-for="Film in Films"
     :to="{
-name: '/basket/edit/[id]',
+name: '/film/edit/[id]',
   params: {
     id:Film.id
   },
