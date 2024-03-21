@@ -1,11 +1,11 @@
 <template>
 <div class="flex p-4">
 
-    <img class="pr-4" :src="PersonnesData!.image_personne" alt="">
+    <img class="pr-4 rounded-3xl" :src="PersonnesData!.image_personne" alt=""/>
     <div>
     <p class="text-xl font-bold">{{ PersonnesData!.nom_personne }}</p>
 <p class="text-lg font-semibold">{{ PersonnesData!.date_personne }}</p>
-<p class="w-1/2">{{ PersonnesData!.description_personne }}</p>
+<p class="w-full">{{ PersonnesData!.description_personne }}</p>
 
 </div>
 </div>

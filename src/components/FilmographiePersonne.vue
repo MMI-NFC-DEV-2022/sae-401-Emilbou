@@ -9,25 +9,23 @@ console.log(error)
 </script>
 
 <template>
-    <div class="p-4">
-        <h2 class="text-lg font-bold mb-5 mt-5">Filmographie</h2>
-        <div class="w-1/2 flex flex-row justify-evenly">
-            <RouterLink
-    v-for="Filmographie in PersonnesFilms"
-    :to="{
+  <div class="p-4">
+    <h2 class="text-lg font-bold mb-5 mt-5">Filmographie</h2>
+    <div class="w-1/2 flex flex-row justify-evenly">
+      <RouterLink v-for="Filmographie in PersonnesFilms" :to="{
 name: '/film/edit/[id]',
   params: {
     id:Filmographie.id_films
   },
     }">
         <div class="flex justify-evenly my-5 gap-5 ">
-        <div v-bind="Filmographie">
-            
-            <p>{{ Filmographie.Films?.nom_film }}</p>
-            <img :src="Filmographie.Films?.affiche_film" class="" alt="">
+          <div v-bind="Filmographie" class="flex w-full justify-center flex-col text-start">
+
+            <img class="object-cover w-full h-72 rounded-t-2xl" :src="Filmographie.Films?.affiche_film" alt="">
+            <p class="mt-2 text-lg font-bold ">{{ Filmographie.Films?.nom_film }}</p>
+          </div>
         </div>
-        </div>
-    </RouterLink>
-</div>
-</div>
+      </RouterLink>
+    </div>
+  </div>
 </template>
