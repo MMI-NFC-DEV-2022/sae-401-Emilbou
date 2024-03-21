@@ -16,9 +16,9 @@
     <div class="flex justify-between">
       <div class="w-1/2 flex flex-col justify-between">
         <div class="flex flex-col">
-          <p class="text-custom-blanc text-blanc text-base ">{{ FilmsData!.condense_film }}</p>
-          <span class="text-custom-blanc text-blanc text-base ">{{ FilmsData!.date_film }}</span>
-          <span class="text-custom-blanc text-blanc text-base ">{{ FilmsData!.duree_film }}</span>
+          <p class="text-custom-blanc text-blanc text-md ">{{ FilmsData!.condense_film }}</p>
+          <span class="text-custom-blanc text-blanc text-lg ">{{ FilmsData!.date_film }}</span>
+          <span class="text-custom-blanc text-blanc text-lg ">{{ FilmsData!.duree_film }}</span>
         </div>
         <div>genre et notes</div>
       </div>
@@ -48,24 +48,5 @@ console.log(error)
 </script>
 
 <style scoped>
-h2{
 
-/* Heading 2 mobile */
-font-family: "Spline Sans";
-font-size: 20px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-}
-
-p {
-
-
-/* Body 1 mobile */
-font-family: "Spline Sans";
-font-size: 13px;
-font-style: normal;
-font-weight: 400;
-line-height: 18px; /* 138.462% */
-}
 </style>

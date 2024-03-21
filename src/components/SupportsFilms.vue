@@ -16,9 +16,7 @@ if (error) {
 
         <h2 class="text-lg font-bold mb-5">Supports</h2>
 <div class="flex justify-evenly w-full gap-10">
-    <h1>ICI c'est ou ?</h1>
             <div v-for="unSupport of FilmsSupports" >
-                <h1>ICI dans boucle unSupport : {{ unSupport }}</h1>
                 <img :src="unSupport.Supports.image_support" class="" alt="">
     
 </div>
@@ -26,7 +24,7 @@ if (error) {
         <div class="w-full flex justify-evenly mb-10 mt-10">
             
             <a :href="`/support/${id_Films}`" class="bg-orange text-noir font-bold w-3/4 py-3 rounded-xl mt-5">
-            <button  class="text-center flex justify-center">
+            <button  class="text-center w-full flex justify-center">
             Voir toutes les offres
         </button>
     </a>
