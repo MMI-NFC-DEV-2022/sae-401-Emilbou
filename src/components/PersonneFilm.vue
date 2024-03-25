@@ -6,8 +6,8 @@
         v-for="Unacteur in FilmsPersonnes"
         :key="Unacteur.id_Personnes"
         :to="{
-          name: '/personne/edit/[id]',
-          params: { id: Unacteur.id_Personnes },
+          name: '/personne/[id]',
+          params: { id: Unacteur.id_Personnes }
         }"
       >
         <div class="flex flex-row justify-evenly my-5 gap-5">
@@ -23,14 +23,14 @@
 </template>
 
 <script setup lang="ts">
-import { supabase } from '@/supabase';
-const props = defineProps<{ id_Films: string }>();
+import { supabase } from '@/supabase'
+const props = defineProps<{ id_Films: string }>()
 
 const { data: FilmsPersonnes, error } = await supabase
   .from('Personnes_Films')
   .select('id_Personnes,Personnes(nom_personne, role_personne, image_personne)')
-  .eq('id_films', props.id_Films);
+  .eq('id_films', props.id_Films)
 
-console.log(FilmsPersonnes);
-console.log(error);
+console.log(FilmsPersonnes)
+console.log(error)
 </script>

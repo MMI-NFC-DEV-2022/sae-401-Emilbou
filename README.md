@@ -6,8 +6,8 @@ Descriptif des pages et fonctionnalités développées et avec liens.
 
 [Page connexion avec login par mail et login / signup par provider GitHub](http://sae401.eboucard.fr/login)
 [affichage des toutes mes itérations films sur la page d'accueil ainsi que les itérations des personnes](http://sae401.eboucard.fr/)
-[Route paramétrique sur la page d'un film depuis card Film exemple](http://sae401.eboucard.fr/film/edit/3)
+[Route paramétrique sur la page d'un film depuis card Film exemple](http://sae401.eboucard.fr/film/3)
 affichage de toutes les données du film avec jointure depuis ma base de données pour afficher les plateformes les supports et les acteurs
 [Route paramétrique sur la page d'un film depuis card Support qui affiche tous les supports du film concerné et qui renvoie au film au clique](http://localhost:5173/support/3)
-[Route paramétrique acteur depuis route paramétrique](https://sae401.eboucard.fr/personne/edit/3)
+[Route paramétrique acteur depuis route paramétrique](https://sae401.eboucard.fr/personne/3)
 Affichage d'une description, nom prénom dates et filmographie cliquable avec route paramétrique issu de jointure de tables de données

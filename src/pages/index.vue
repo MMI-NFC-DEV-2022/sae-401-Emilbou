@@ -39,7 +39,7 @@ const { data: Personnes } = await supabase.from('Personnes').select('*')
       <RouterLink
         v-for="Film in Films"
         :to="{
-          name: '/film/edit/[id]',
+          name: '/film/[id]',
           params: {
             id: Film.id
           }
@@ -84,7 +84,7 @@ const { data: Personnes } = await supabase.from('Personnes').select('*')
       <RouterLink
         v-for="Film in Films"
         :to="{
-          name: '/film/edit/[id]',
+          name: '/film/[id]',
           params: {
             id: Film.id
           }
@@ -114,7 +114,7 @@ const { data: Personnes } = await supabase.from('Personnes').select('*')
     <RouterLink
       v-for="Personne in Personnes"
       :to="{
-        name: '/personne/edit/[id]',
+        name: '/personne/[id]',
         params: {
           id: Personne.id
         }
