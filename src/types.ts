@@ -56,6 +56,53 @@ export type Database = {
           },
         ]
       }
+      Films_utilisateur: {
+        Row: {
+          affiche_film: string | null
+          condense_film: string | null
+          created_at: string
+          date_film: string | null
+          description_film: string | null
+          duree_film: number | null
+          film_personne: number | null
+          id: number
+          id_Supports_Films: number | null
+          nom_film: string | null
+        }
+        Insert: {
+          affiche_film?: string | null
+          condense_film?: string | null
+          created_at?: string
+          date_film?: string | null
+          description_film?: string | null
+          duree_film?: number | null
+          film_personne?: number | null
+          id?: number
+          id_Supports_Films?: number | null
+          nom_film?: string | null
+        }
+        Update: {
+          affiche_film?: string | null
+          condense_film?: string | null
+          created_at?: string
+          date_film?: string | null
+          description_film?: string | null
+          duree_film?: number | null
+          film_personne?: number | null
+          id?: number
+          id_Supports_Films?: number | null
+          nom_film?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "public_Films_utilisateur_film_personne_fkey"
+            columns: ["film_personne"]
+            isOneToOne: false
+            referencedRelation: "Personnes"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       Personnes: {
         Row: {
           created_at: string
@@ -232,6 +279,26 @@ export type Database = {
             columns: ["id_supports"]
             isOneToOne: false
             referencedRelation: "Supports"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      users: {
+        Row: {
+          user_id: string
+        }
+        Insert: {
+          user_id: string
+        }
+        Update: {
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "public_users_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: true
+            referencedRelation: "users"
             referencedColumns: ["id"]
           },
         ]

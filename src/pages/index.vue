@@ -85,7 +85,7 @@ const { data: Filmutilisateur } = await supabase.from('Films_utilisateur').selec
       <RouterLink
         v-for="Filmutilisateurs in Filmutilisateur"
         :to="{
-          name: '/film/[id]',
+          name: '/film/user/[id]',
           params: {
             id: Filmutilisateurs.id
           }
