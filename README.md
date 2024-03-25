@@ -11,3 +11,5 @@ affichage de toutes les données du film avec jointure depuis ma base de donnée
 [Route paramétrique sur la page d'un film depuis card Support qui affiche tous les supports du film concerné et qui renvoie au film au clique](http://localhost:5173/support/3)
 [Route paramétrique acteur depuis route paramétrique](https://sae401.eboucard.fr/personne/3)
 Affichage d'une description, nom prénom dates et filmographie cliquable avec route paramétrique issu de jointure de tables de données
+[Affichage des fims rendtrés par l'utilisateur sur l'accueil avec le formulaire](http://sae401.eboucard.fr/)
+[formulaire pour rentrer les données](http://sae401.eboucard.fr/edit)
