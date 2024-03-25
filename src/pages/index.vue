@@ -5,6 +5,7 @@ import iconerecherche from '@/components/icons/iconerecherche.vue'
 import CardPersonnes from '@/components/CardPersonnes.vue'
 const { data: Films, error } = await supabase.from('Films').select('*')
 const { data: Personnes } = await supabase.from('Personnes').select('*')
+const { data: Filmutilisateur } = await supabase.from('Films_utilisateur').select('*')
 </script>
 
 <template>
@@ -79,25 +80,25 @@ const { data: Personnes } = await supabase.from('Personnes').select('*')
   </div>
 
   <div class="p-4">
-    <h2 class="text-3xl font-bold mb-5 mt-14">Nouveautés</h2>
+    <h2 class="text-3xl font-bold mb-5 mt-14">Films publiés par les utilisateurs</h2>
     <div class="flex gap-5">
       <RouterLink
-        v-for="Film in Films"
+        v-for="Filmutilisateurs in Filmutilisateur"
         :to="{
           name: '/film/[id]',
           params: {
-            id: Film.id
+            id: Filmutilisateurs.id
           }
         }"
       >
         <CardAccueil
-          v-bind="Film"
-          :key="Film.id"
-          :nom_film="Film.nom_film"
-          :duree_film="Film.duree_film"
-          :date_film="Film.date_film"
-          :description_film="Film.description_film"
-          :affiche_film="Film.affiche_film"
+          v-bind="Filmutilisateurs"
+          :key="Filmutilisateurs.id"
+          :nom_film="Filmutilisateurs.nom_film"
+          :duree_film="Filmutilisateurs.duree_film"
+          :date_film="Filmutilisateurs.date_film"
+          :description_film="Filmutilisateurs.description_film"
+          :affiche_film="Filmutilisateurs.affiche_film"
         />
       </RouterLink>
     </div>
