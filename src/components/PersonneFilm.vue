@@ -13,7 +13,7 @@
         <div class="flex flex-row justify-evenly my-5 gap-5">
           <div>
             <p>{{ Unacteur.Personnes?.nom_personne }}</p>
-            <img :src="Unacteur.Personnes?.image_personne" alt="" />
+            <img :src="Unacteur.Personnes?.image_personne" class="object-cover w-60" alt="" />
             <p>{{ Unacteur.Personnes?.role_personne }}</p>
           </div>
         </div>
