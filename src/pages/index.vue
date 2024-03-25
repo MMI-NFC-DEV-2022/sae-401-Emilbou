@@ -104,7 +104,10 @@ const { data: Filmutilisateur } = await supabase.from('Films_utilisateur').selec
     </div>
   </div>
   <div class="p-4">
-    <div class="w-full flex justify-end">
+    <div class="w-full flex justify-end gap-10">
+      <router-link to="/edit" class="font-bold bg-slate-300 p-4 rounded-2xl mb-14"
+        >ajouter un film</router-link
+      >
       <router-link to="/film" class="font-bold bg-slate-300 p-4 rounded-2xl mb-14"
         >Voir toutes les nouveautés</router-link
       >
