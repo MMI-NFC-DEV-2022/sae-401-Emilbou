@@ -13,3 +13,4 @@ affichage de toutes les données du film avec jointure depuis ma base de donnée
 Affichage d'une description, nom prénom dates et filmographie cliquable avec route paramétrique issu de jointure de tables de données
 [Affichage des fims rendtrés par l'utilisateur sur l'accueil avec le formulaire](http://sae401.eboucard.fr/)
 [formulaire pour rentrer les données](http://sae401.eboucard.fr/edit)
+Les données ne peuvent être rentrées que si l'utilisateur est connecté
