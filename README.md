@@ -5,7 +5,7 @@ Emilien Boucard
 Descriptif des pages et fonctionnalités développées et avec liens.
 
 [Page connexion avec login par mail et login / signup par provider GitHub](http://sae401.eboucard.fr/login)
-[affichage des toutes mes itérations films sur la page d'accueil](http://sae401.eboucard.fr/)
+[affichage des toutes mes itérations films sur la page d'accueil ainsi que les itérations des personnes](http://sae401.eboucard.fr/)
 [Route paramétrique sur la page d'un film depuis card Film exemple](http://sae401.eboucard.fr/film/edit/3)
 affichage de toutes les données du film avec jointure depuis ma base de données pour afficher les plateformes les supports et les acteurs
 [Route paramétrique acteur depuis route paramétrique](https://sae401.eboucard.fr/personne/edit/3)
